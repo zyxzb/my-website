@@ -47,8 +47,8 @@ const Form = () => {
           onSubmit={handleSubmit(submitForm)}
           className='flex flex-col gap-2 w-full max-w-[600px] mx-auto mt-10'
         >
-          <div className='flex gap-2'>
-            <div className='w-1/2'>
+          <div className='flex flex-col sm:flex-row gap-2'>
+            <div className='w-full'>
               <input
                 type='text'
                 placeholder='First Name'
@@ -58,7 +58,7 @@ const Form = () => {
               />
               <span>{errors.firstName?.message}</span>
             </div>
-            <div className='w-1/2'>
+            <div className='w-full'>
               <input
                 type='text'
                 placeholder='Last Name (optional)'
@@ -69,8 +69,8 @@ const Form = () => {
               <span>{errors.lastName?.message}</span>
             </div>
           </div>
-          <div className='flex gap-2'>
-            <div className='w-1/2'>
+          <div className='flex flex-col sm:flex-row gap-2'>
+            <div className='w-full'>
               <input
                 type='email'
                 placeholder='Email'
@@ -80,7 +80,7 @@ const Form = () => {
               />
               <span>{errors.email?.message}</span>
             </div>
-            <div className='w-1/2'>
+            <div className='w-full'>
               <input
                 type='text'
                 placeholder='Phone number (optional)'
