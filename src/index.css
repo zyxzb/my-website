@@ -1,13 +1,41 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;700&display=swap");
+
+@layer base {
+  body {
+    @apply bg-bgDarkBlue;
+  }
+
+  small {
+    @apply mb-4 block text-textDarkBlue;
+
+  }
+
+  form input,
+  textarea {
+    @apply p-2 bg-transparent border;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #12232E;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 2px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #12232E;
+  border-radius: 2px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #12232E;
+  border-radius: 14px;
+  border: 2px solid #EEFBFB;
 }
