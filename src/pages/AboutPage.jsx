@@ -4,12 +4,7 @@ const AboutPage = ({ title }) => {
   return (
     <div>
       <small>{title}</small>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus,
-        officia qui consequuntur facilis ab repellendus, alias commodi quis modi
-        animi saepe nobis necessitatibus debitis. Accusamus quasi iusto cumque
-        numquam nobis.
-      </p>
+      <p>This page has no content yet</p>
     </div>
   );
 };

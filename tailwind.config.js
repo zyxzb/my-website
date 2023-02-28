@@ -13,6 +13,10 @@ module.exports = {
       fontFamily: {
         sans: ['Inconsolata', 'ui-sans-serif', 'system-ui'],
       },
+      screens: {
+        xSmallHeight: { raw: '(max-height: 490px)' },
+        smallHeight: { raw: '(max-height: 725px)' },
+      },
     },
   },
   plugins: [],

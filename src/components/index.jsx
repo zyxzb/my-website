@@ -5,5 +5,21 @@ import Form from './Form';
 import Loader from './Loader';
 import ToggleBtn from './ToggleBtn';
 import FormText from './FormText';
+import NavLinksTop from './NavLinksTop';
+import NavSkills from './NavSkills';
+import NavLinksBottom from './NavLinksBottom';
+import TitleAnimation from './TitleAnimation';
 
-export { Header, Logo, Nav, Form, Loader, ToggleBtn, FormText };
+export {
+  Header,
+  Logo,
+  Nav,
+  Form,
+  Loader,
+  ToggleBtn,
+  FormText,
+  NavSkills,
+  NavLinksTop,
+  NavLinksBottom,
+  TitleAnimation,
+};

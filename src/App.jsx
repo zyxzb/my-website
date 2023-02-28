@@ -1,4 +1,10 @@
-import { ContactPage, HomePage, AboutPage, ProjectsPage } from 'pages';
+import {
+  ContactPage,
+  HomePage,
+  AboutPage,
+  ProjectsPage,
+  ErrorPage,
+} from 'pages';
 import {
   RouterProvider,
   createBrowserRouter,
@@ -15,6 +21,7 @@ const router = createBrowserRouter(
       <Route path='contact' element={<ContactPage title='Contact Page' />} />
       <Route path='about' element={<AboutPage title='About Page' />} />
       <Route path='projects' element={<ProjectsPage title='Projects Page' />} />
+      <Route path='*' element={<ErrorPage title='Error Page' />} />
     </Route>,
   ),
 );

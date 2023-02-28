@@ -12,6 +12,8 @@ const ToggleBtn = () => {
           : 'visible md:invisible relative group'
       }
       onClick={() => setNavOpen((prevState) => !prevState)}
+      type='button'
+      aria-label='toggle navigation'
     >
       <div className='flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden'>
         <div
