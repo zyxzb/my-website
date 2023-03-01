@@ -4,8 +4,11 @@ const GlobalContext = React.createContext();
 
 export const GlobalContextProvider = ({ children }) => {
   const [navOpen, setNavOpen] = useState(false);
+  const [showContact, setShowContact] = useState(false);
   return (
-    <GlobalContext.Provider value={{ navOpen, setNavOpen }}>
+    <GlobalContext.Provider
+      value={{ navOpen, setNavOpen, showContact, setShowContact }}
+    >
       {children}
     </GlobalContext.Provider>
   );

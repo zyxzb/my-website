@@ -1,6 +1,8 @@
+import { useGlobalContext } from 'context/globalContext';
 import { TypeAnimation } from 'react-type-animation';
 
 const TitleAnimation = () => {
+  const { setShowContact } = useGlobalContext();
   return (
     <TypeAnimation
       sequence={[
@@ -10,10 +12,8 @@ const TitleAnimation = () => {
         'Frontend/React developer..',
         2000,
         "Let's Work Together",
-        2000,
-        () => {
-          console.log('Done typing!'); // Place optional callbacks anywhere in the array
-        },
+        1000,
+        () => setShowContact(true),
       ]}
       wrapper='h1'
       cursor={true}

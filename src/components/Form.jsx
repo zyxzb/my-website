@@ -41,7 +41,7 @@ const Form = () => {
 
   return (
     <>
-      <div className='form flex flex-col text-center w-full max-w-[800px] mx-auto'>
+      <div className='flex flex-col text-center w-full max-w-[800px] mx-auto'>
         <FormText />
         <form
           onSubmit={handleSubmit(submitForm)}

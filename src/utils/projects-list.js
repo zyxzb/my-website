@@ -1,0 +1,81 @@
+import { v4 as uuidv4 } from 'uuid';
+
+export const projects = [
+  {
+    id: uuidv4(),
+    name: 'Project X',
+    imgUrl: 'https://placeimg.com/600/400/animals',
+    githubUrl: '/',
+    pageUrl: '/',
+  },
+  {
+    id: uuidv4(),
+    name: 'Project X',
+    imgUrl: 'https://placeimg.com/600/600/arch',
+    githubUrl: '/',
+    pageUrl: '/',
+  },
+  {
+    id: uuidv4(),
+    name: 'Project X',
+    imgUrl: 'https://placeimg.com/600/300/nature',
+    githubUrl: '/',
+    pageUrl: '/',
+  },
+  {
+    id: uuidv4(),
+    name: 'Project X',
+    imgUrl: 'https://placeimg.com/600/600/grayscale',
+    githubUrl: '/',
+    pageUrl: '/',
+  },
+  {
+    id: uuidv4(),
+    name: 'Project X',
+    imgUrl: 'https://placeimg.com/600/450/people',
+    githubUrl: '/',
+    pageUrl: '/',
+  },
+  {
+    id: uuidv4(),
+    name: 'Project X',
+    imgUrl: 'https://placeimg.com/600/350/tech',
+    githubUrl: '/',
+    pageUrl: '/',
+  },
+  {
+    id: uuidv4(),
+    name: 'Project X',
+    imgUrl: 'https://placeimg.com/600/800/animals/grayscale',
+    githubUrl: '/',
+    pageUrl: '/',
+  },
+  {
+    id: uuidv4(),
+    name: 'Project X',
+    imgUrl: 'https://placeimg.com/600/400/people/sepia',
+    githubUrl: '/',
+    pageUrl: '/',
+  },
+  {
+    id: uuidv4(),
+    name: 'Project X',
+    imgUrl: 'https://placeimg.com/600/600/tech/grayscale',
+    githubUrl: '/',
+    pageUrl: '/',
+  },
+  {
+    id: uuidv4(),
+    name: 'Project X',
+    imgUrl: 'https://placeimg.com/600/200/animals/sepia',
+    githubUrl: '/',
+    pageUrl: '/',
+  },
+  {
+    id: uuidv4(),
+    name: 'Project X',
+    imgUrl: 'https://placeimg.com/600/600/tech/grayscale',
+    githubUrl: '/',
+    pageUrl: '/',
+  },
+];

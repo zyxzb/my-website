@@ -14,9 +14,10 @@ import {
   SiTypescript,
   SiNextdotjs,
   SiPostgresql,
+  SiFirebase,
 } from 'react-icons/si';
 import { ImHtmlFive } from 'react-icons/im';
-import { FaSass, FaGithub } from 'react-icons/fa';
+import { FaSass, FaGithub, FaStripeS } from 'react-icons/fa';
 import { BiGitMerge } from 'react-icons/bi';
 import { TbApi } from 'react-icons/tb';
 import { MdAnimation } from 'react-icons/md';
@@ -112,6 +113,16 @@ export const iconsSkills = [
     id: uuidv4(),
     icon: <MdAnimation />,
     title: 'GSAP',
+  },
+  {
+    id: uuidv4(),
+    icon: <FaStripeS />,
+    title: 'Stripe',
+  },
+  {
+    id: uuidv4(),
+    icon: <SiFirebase />,
+    title: 'Firebase',
   },
 ];
 
