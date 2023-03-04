@@ -8,8 +8,8 @@ const ToggleBtn = () => {
     <button
       className={
         navOpen
-          ? 'visible md:invisible relative group active'
-          : 'visible md:invisible relative group'
+          ? 'visible md:invisible relative group overflow-hidden active'
+          : 'visible md:invisible relative group overflow-hidden'
       }
       onClick={() => setNavOpen((prevState) => !prevState)}
       type='button'
@@ -21,7 +21,6 @@ const ToggleBtn = () => {
         ></div>
         <div className='bg-white h-[2px] w-7 rounded transform transition-all duration-300 group-[.active]:translate-x-10 delay-75'></div>
         <div className='bg-white h-[2px] w-7 transform transition-all duration-300 origin-left group-[.active]:translate-x-10 delay-150'></div>
-
         <div className='absolute items-center justify-between transform transition-all duration-500 top-2.5 -translate-x-10 group-[.active]:translate-x-0 flex w-0 group-[.active]:w-12'>
           <div className='absolute bg-white h-[2px] w-5 transform transition-all duration-500 rotate-0 delay-300 group-[.active]:rotate-45'></div>
           <div className='absolute bg-white h-[2px] w-5 transform transition-all duration-500 -rotate-0 delay-300 group-[.active]:-rotate-45'></div>

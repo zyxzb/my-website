@@ -17,6 +17,9 @@ module.exports = {
         xSmallHeight: { raw: '(max-height: 490px)' },
         smallHeight: { raw: '(max-height: 725px)' },
       },
+      height: {
+        '100dvh': '100dvh',
+      },
     },
   },
   plugins: [],
