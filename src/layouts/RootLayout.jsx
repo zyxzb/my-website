@@ -10,7 +10,7 @@ const RootLayout = () => {
       <div className='relative flex w-full max-w-screen-2xl mx-auto bg-bgDarkBlue tracking-wide'>
         <Nav />
         <main
-          className='bg-bgDarkBlue h-screen transition-all duration-300 overflow-auto px-3 md:px-6 pt-24 text-textLightBlue w-full'
+          className='bg-bgDarkBlue h-screen transition-all duration-300 overflow-auto px-3 pb-[40px] md:px-6 pt-24 text-textLightBlue w-full'
           key={location.pathname}
           location={location}
         >

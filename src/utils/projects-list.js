@@ -7,6 +7,7 @@ export const projects = [
     imgUrl: 'https://placeimg.com/600/400/animals',
     githubUrl: '/',
     pageUrl: '/',
+    tech: ['github', 'solution 2', 'DatoCms', 'React', 'Styled Components'],
   },
   {
     id: uuidv4(),
@@ -14,6 +15,7 @@ export const projects = [
     imgUrl: 'https://placeimg.com/600/600/arch',
     githubUrl: '/',
     pageUrl: '/',
+    tech: ['github', 'solution 2', 'DatoCms', 'React', 'Styled Components'],
   },
   {
     id: uuidv4(),

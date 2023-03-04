@@ -4,7 +4,7 @@ import { NavLinksBottom, NavLinksTop, NavSkills } from 'components';
 const Nav = () => {
   const { navOpen } = useGlobalContext();
   const navBase =
-    'absolute bg-bgDarkBlue h-[calc(100vh-56px)] bottom-0 w-[240px] min-w-[240px] flex flex-col justify-between border-r-[1px] md:-translate-x-[0] transition-all md:relative md:mt-14 smallHeight:text-xs overflow-auto';
+    'absolute bg-bgDarkBlue h-[calc(100vh-56px)] bottom-0 w-[240px] min-w-[240px] flex flex-col justify-between border-r-[1px] md:-translate-x-[0] transition-all md:relative md:mt-14 smallHeight:text-xs overflow-auto z-30';
 
   return (
     <nav

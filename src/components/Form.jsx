@@ -100,13 +100,18 @@ const Form = () => {
           <span>{errors.message?.message}</span>
           <button
             type='submit'
-            className='bg-textDarkBlue hover:bg-textLightBlue p-2 mb-10 transition hover:text-bgDarkBlue'
+            className='bg-textDarkBlue hover:bg-textLightBlue p-2 transition hover:text-bgDarkBlue'
           >
             Submit
           </button>
         </form>
       </div>
-      {activeLoader ? <Loader /> : null}
+      {activeLoader ? (
+        <div className='bg-bgDarkBlue fixed top-0 left-0 right-0 bottom-0 z-40 grid place-items-center backdrop-blur-[6px] bg-opacity-40'>
+          <Loader />
+          <p>Sending...</p>
+        </div>
+      ) : null}
     </>
   );
 };

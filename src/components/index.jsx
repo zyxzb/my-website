@@ -10,6 +10,7 @@ import NavSkills from './NavSkills';
 import NavLinksBottom from './NavLinksBottom';
 import TitleAnimation from './TitleAnimation';
 import HomeTextSection from './HomeTextSection';
+import ProjectsGallery from './ProjectsGallery';
 
 export {
   Header,
@@ -24,4 +25,5 @@ export {
   NavLinksBottom,
   TitleAnimation,
   HomeTextSection,
+  ProjectsGallery,
 };

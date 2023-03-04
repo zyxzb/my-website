@@ -30,7 +30,7 @@ const HomeTextSection = () => {
             : 'collapse opacity-0 transition duration-1000'
         }
       >
-        <p className='mt-14 mb-10 sm:text-xl '>Or leave me a message</p>
+        <p className='mt-14 mb-10 sm:text-xl '>Leave me a message</p>
         <Link
           to='/contact'
           className='bg-textDarkBlue p-4 hover:bg-textLightBlue hover:text-bgDarkBlue transition'

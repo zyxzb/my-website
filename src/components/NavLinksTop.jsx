@@ -1,7 +1,10 @@
 import { navLinks } from 'utils/nav-links';
 import { NavLink } from 'react-router-dom';
+import { useGlobalContext } from 'context/globalContext';
 
 const NavLinksTop = () => {
+  const { setNavOpen } = useGlobalContext();
+
   return (
     <div className='text-textLightBlue'>
       <ul className='flex flex-col p-6'>
@@ -10,6 +13,7 @@ const NavLinksTop = () => {
             <li key={link.id}>
               <NavLink
                 to={link.url}
+                onClick={() => setNavOpen(false)}
                 className={({ isActive }) => {
                   const base =
                     'py-4 capitalize w-full flex items-center xSmallHeight:py-2';
