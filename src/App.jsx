@@ -13,6 +13,10 @@ import {
 } from 'react-router-dom';
 import RootLayout from 'layouts/RootLayout';
 import { GlobalContextProvider } from 'context/globalContext';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { ReactQueryDevtools } from 'react-query/devtools';
+
+const queryClient = new QueryClient({});
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -28,9 +32,12 @@ const router = createBrowserRouter(
 
 function App() {
   return (
-    <GlobalContextProvider>
-      <RouterProvider router={router} />
-    </GlobalContextProvider>
+    <QueryClientProvider client={queryClient}>
+      <GlobalContextProvider>
+        <RouterProvider router={router} />
+        <ReactQueryDevtools initialIsOpen={false} />
+      </GlobalContextProvider>
+    </QueryClientProvider>
   );
 }
 

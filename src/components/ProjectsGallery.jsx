@@ -1,12 +1,28 @@
 import { Link } from 'react-router-dom';
-import useFetch from 'hooks/useFetch';
-import { generateRandomHeight } from 'utils/projects-utils';
 import { Loader } from 'components';
+import { useQuery } from 'react-query';
+import axios from 'axios';
+import { query } from 'utils/dato-cms-data';
 
 const ProjectsGallery = () => {
-  const [{ projects, error, loading }] = useFetch();
-
-  if (loading) {
+  const { isLoading, data, isError, error } = useQuery(['projects'], () =>
+    axios
+      .post(
+        'https://graphql.datocms.com/',
+        {
+          query,
+        },
+        {
+          headers: {
+            authorization: `Bearer ${process.env.REACT_APP_DATOCMS_TOKEN}`,
+          },
+        },
+      )
+      .then(({ data: { data } }) => {
+        return data.allProjectsModels;
+      }),
+  );
+  if (isLoading) {
     return (
       <div className='w-full h-[300px] flex justify-center items-center flex-col'>
         <Loader />
@@ -14,17 +30,17 @@ const ProjectsGallery = () => {
     );
   }
 
-  if (error) {
+  if (isError) {
     return (
       <div className='w-full h-[300px] flex justify-center items-center flex-col'>
-        <p>{error}</p>
+        <p>{error.message}</p>
       </div>
     );
   }
 
   return (
-    <div className='w-full max-w-[100%] sm:columns-2 2xl:columns-3 mx-auto'>
-      {projects.map(({ id, name, githubUrl, pageUrl, imageUrl, tech }) => (
+    <div className='w-full max-w-[100%] columns-1 lg:columns-2 mx-auto'>
+      {data.map(({ id, name, githubUrl, pageUrl, imageUrl, tech }) => (
         <div
           className='inline-block mb-2 last-of-type:mb-0 w-full rounded-md overflow-hidden relative group'
           key={id}
@@ -60,7 +76,7 @@ const ProjectsGallery = () => {
             <img
               src={imageUrl.url}
               alt={`${name} card background`}
-              className={`w-full ${generateRandomHeight()} object-cover`}
+              className={`w-full h-full object-cover`}
             />
             <div className='absolute top-0 bottom-0 left-0 right-0 bg-black/20 group-hover:bg-transparent transition-all'></div>
           </div>
